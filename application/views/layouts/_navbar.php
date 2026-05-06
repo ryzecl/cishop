@@ -49,35 +49,38 @@
                     <li class="nav-item">
                         <a href="/cart.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="/login.html" class="nav-link">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/register.html" class="nav-link">Register</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a
-                            id="dropdown-2"
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false">
-                            Admin
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdown-2">
-                            <li>
-                                <a class="dropdown-item" href="/profile.html">Profile</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/orders.html">Orders</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Logout</a>
-                            </li>
-                        </ul>
-                    </li>
+                    <?php if (!$this->session->userdata('is_login')) : ?>
+                        <li class="nav-item">
+                            <a href="<?= base_url('login') ?>" class="nav-link">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('register') ?>" class="nav-link">Register</a>
+                        </li>
+                    <?php else : ?>
+                        <li class="nav-item dropdown">
+                            <a
+                                id="dropdown-2"
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false">
+                                <?= ucwords($this->session->userdata('name')) ?>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown-2">
+                                <li>
+                                    <a class="dropdown-item" href="/profile.html">Profile</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/orders.html">Orders</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="<?= base_url('logout') ?>">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>

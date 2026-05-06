@@ -43,7 +43,7 @@ class Register_model extends MY_Model
         $data = [
             'name' => $input->name,
             'email' => strtolower($input->email),
-            'password' => hash('sha256', $input->password),
+            'password' => hashEncrypt($input->password),
             'role' => 'member',
             'is_active' => 1,
         ];
