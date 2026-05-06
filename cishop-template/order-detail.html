@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Detail - Codeigniter E-Commerce</title>
+
+    <link
+      rel="stylesheet"
+      href="/assets/libs/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/libs/fontawesome/css/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
+        <div class="container-fluid container-lg">
+          <a class="navbar-brand h1" href="index.html">CIShop</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  id="dropdown-1"
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Manage
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-1">
+                  <li>
+                    <a class="dropdown-item" href="/admin-category.html"
+                      >Kategori</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/admin-product.html"
+                      >Produk</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/admin-order.html">Order</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="/cart.html" class="nav-link"
+                  ><i class="fas fa-shopping-cart"></i> Cart (0)</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="/login.html" class="nav-link">Login</a>
+              </li>
+              <li class="nav-item">
+                <a href="/register.html" class="nav-link">Register</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  id="dropdown-2"
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Admin
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-2">
+                  <li>
+                    <a class="dropdown-item" href="/profile.html">Profile</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/orders.html">Orders</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Logout</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main" class="container">
+      <div class="row">
+        <!-- Sidebar Menu -->
+        <div class="col-md-3">
+          <div class="card mb-3">
+            <div class="card-header">Menu</div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a href="/profile.html" class="text-decoration-none">Profile</a>
+              </li>
+              <li class="list-group-item">
+                <a href="/orders.html" class="text-decoration-none">Orders</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Order Detail Content -->
+        <div class="col-md-9">
+          <div class="card">
+            <div class="card-header">
+              Detail Order #012345123
+              <div class="float-end">
+                <span class="badge rounded-pill text-bg-warning"
+                  >Waiting for Payment</span
+                >
+              </div>
+            </div>
+            <div class="card-body">
+              <p>Nama: <strong>Nama Penerima</strong></p>
+              <p>Telepon: <strong>+62899999</strong></p>
+              <p>
+                Alamat: <strong>Jl. Sesama, No. 123, Perumahan Baru.</strong>
+              </p>
+
+              <table class="table table-hover align-middle">
+                <thead>
+                  <tr>
+                    <th>Produk</th>
+                    <th class="text-center">Harga</th>
+                    <th class="text-center">Jumlah</th>
+                    <th class="text-center">Subtotal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p>
+                        <img
+                          src="https://placehold.co/50x50"
+                          alt="Product Image"
+                        />
+                        <strong>Product Title</strong>
+                      </p>
+                    </td>
+                    <td class="text-center">Rp100.000,-</td>
+                    <td class="text-center">3</td>
+                    <td class="text-center">Rp300.000,-</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="3" class="text-end">
+                      <strong>Total:</strong>
+                    </td>
+                    <td class="text-center"><strong>Rp300.000,-</strong></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <div class="card-footer">
+              <a href="/order-confirm.html" class="btn btn-success"
+                >Konfirmasi Pembayaran</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="assets/libs/jquery/jquery-4.0.0.min.js"></script>
+    <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

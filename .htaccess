@@ -1,0 +1,14 @@
+// Source - https://stackoverflow.com/q/14783666
+// Posted by Ty Bailey, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-04-29, License - CC BY-SA 3.0
+
+RewriteEngine On
+
+Options All -Indexes
+IndexIgnore *
+
+RewriteBase /ci
+RewriteCond $1 !^(index\.php|images|js|css|favicon\.png)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]

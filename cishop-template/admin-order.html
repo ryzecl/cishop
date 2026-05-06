@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin: Order - Codeigniter E-Commerce</title>
+
+    <link
+      rel="stylesheet"
+      href="/assets/libs/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/libs/fontawesome/css/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
+        <div class="container-fluid container-lg">
+          <a class="navbar-brand h1" href="index.html">CIShop</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  id="dropdown-1"
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Manage
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-1">
+                  <li>
+                    <a class="dropdown-item" href="/admin-category.html"
+                      >Kategori</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/admin-product.html"
+                      >Produk</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/admin-order.html">Order</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/admin-users.html"
+                      >Pengguna</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="/cart.html" class="nav-link"
+                  ><i class="fas fa-shopping-cart"></i> Cart (0)</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="/login.html" class="nav-link">Login</a>
+              </li>
+              <li class="nav-item">
+                <a href="/register.html" class="nav-link">Register</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  id="dropdown-2"
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Admin
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-2">
+                  <li>
+                    <a class="dropdown-item" href="/profile.html">Profile</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/orders.html">Orders</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Logout</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-10 mx-auto">
+          <div class="card">
+            <div class="card-header">
+              <span>Order</span>
+              <div class="float-end">
+                <form action="">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      placeholder="Cari"
+                    />
+                    <button type="submit" class="btn btn-sm btn-primary">
+                      <i class="fas fa-search"></i>
+                    </button>
+                    <a href="/admin-order.html" class="btn btn-sm btn-primary">
+                      <i class="fas fa-eraser"></i>
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="card-body">
+              <table class="table table-hover align-middle">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Order</th>
+                    <th>Tanggal</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="/admin-order-detail.html" class="text-decoration-none">
+                        <strong>#012345123</strong>
+                      </a>
+                    </td>
+                    <td>2019/08/16</td>
+                    <td>Rp100.000</td>
+                    <td>
+                      <span class="badge rounded-pill text-bg-warning">Waiting for Payment</span>
+                    </td>
+                    <td>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#">Previous</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="assets/libs/jquery/jquery-4.0.0.min.js"></script>
+    <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

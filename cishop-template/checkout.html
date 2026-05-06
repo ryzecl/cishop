@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - Codeigniter E-Commerce</title>
+
+    <link
+      rel="stylesheet"
+      href="/assets/libs/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/libs/fontawesome/css/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
+        <div class="container-fluid container-lg">
+          <a class="navbar-brand h1" href="index.html">CIShop</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  id="dropdown-1"
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Manage
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-1">
+                  <li>
+                    <a class="dropdown-item" href="/admin-category.html"
+                      >Kategori</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/admin-product.html"
+                      >Produk</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/admin-order.html">Order</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="/cart.html" class="nav-link"
+                  ><i class="fas fa-shopping-cart"></i> Cart (0)</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="/login.html" class="nav-link">Login</a>
+              </li>
+              <li class="nav-item">
+                <a href="/register.html" class="nav-link">Register</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  id="dropdown-2"
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Admin
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-2">
+                  <li>
+                    <a class="dropdown-item" href="/profile.html">Profile</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/orders.html">Orders</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Logout</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main" class="container">
+      <div class="row">
+        <!-- Left Section -->
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header">Formulir Alamat Pengiriman</div>
+            <div class="card-body">
+              <form action="">
+                <div class="mb-3">
+                  <label for="username" class="form-label">Nama</label>
+                  <input
+                    id="username"
+                    type="text"
+                    class="form-control"
+                    name="username"
+                    placeholder="Masukkan nama penerima"
+                    autofocus
+                  />
+                  <small class="form-text text-danger">Nama harus diisi.</small>
+                </div>
+
+                <div class="mb-3">
+                  <label for="address" class="form-label">Alamat</label>
+                  <textarea
+                    class="form-control"
+                    id="address"
+                    name="address"
+                    cols="30"
+                    rows="5"
+                  ></textarea>
+                  <small class="form-text text-danger"
+                    >Alamat harus diisi.</small
+                  >
+                </div>
+
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Telepon</label>
+                  <input
+                    id="phone"
+                    type="text"
+                    class="form-control"
+                    name="phone"
+                    placeholder="Masukkan nomor telepon penerima"
+                  />
+                  <small class="form-text text-danger"
+                    >Nomor Telepon harus diisi.</small
+                  >
+                </div>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card mb-3">
+                <div class="card-header">Cart</div>
+
+                <div class="card-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Produk</th>
+                        <th>Qty</th>
+                        <th>Harga</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Product Title</td>
+                        <td>1</td>
+                        <td>Rp100.000</td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">Subtotal</td>
+                        <td>Rp.300.000</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th colspan="2">Total</th>
+                        <th>Rp300.000</th>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="assets/libs/jquery/jquery-4.0.0.min.js"></script>
+    <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
