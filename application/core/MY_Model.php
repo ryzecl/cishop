@@ -188,6 +188,8 @@ class MY_Model extends CI_Model
             $this->perPage,
             $this->calculateRealOffset($page),
         );
+
+        return $this;
     }
 
     public function calculateRealOffset($page)
@@ -211,6 +213,7 @@ class MY_Model extends CI_Model
             'per_page' => $this->perPage,
             'total_rows' => $totalRows,
             'use_page_numbers' => true,
+            'cur_page' => $this->uri->segment($uriSegment) ?: 1,
 
             'full_tag_open' => '<ul class="pagination">',
             'full_tag_close' => '</ul>',
@@ -227,8 +230,8 @@ class MY_Model extends CI_Model
             'next_tag_close' => '</li>',
             'last_tag_open' => '<li class="page-item">',
             'last_tag_close' => '</li>',
-            'cur_tag_open' => '<li class="page-item active"><a href="# class="page-link">',
-            'cur_tag_close' => '<span class="sr-only">(current)</span></a></li>',
+            'cur_tag_open' => '<li class="page-item active"><a href="#" class="page-link">',
+            'cur_tag_close' => '<span class="visually-hidden">(current)</span></a></li>',
             'num_tag_open' => '<li class="page-item">',
             'num_tag_close' => '</li>'
         ];
