@@ -30,7 +30,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdown-1">
                             <li>
-                                <a class="dropdown-item" href="/admin-category.html">Kategori</a>
+                                <a class="dropdown-item" href="<?= base_url('category') ?>">Kategori</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="/admin-product.html">Produk</a>
