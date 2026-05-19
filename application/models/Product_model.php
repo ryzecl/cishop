@@ -10,13 +10,13 @@ class Product_model extends MY_Model
     public function getDefaultValues()
     {
         return [
-            'id_category' = '',
-            'slug' = '',
-            'title' = '',
-            'description' = '',
-            'price' = '',
-            'is_available' = 1,
-            'image' = ''
+            'id_category' => '',
+            'slug' => '',
+            'title' => '',
+            'description' => '',
+            'price' => '',
+            'is_available' => 1,
+            'image' => ''
         ];
     }
 

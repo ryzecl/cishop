@@ -90,17 +90,39 @@ class MY_Model extends CI_Model
     }
 
     /**
-     * Menggabungkan tabel (JOIN)
-     * Asumsi konvensi: produk.id_kategori = kategori.id
-     * 
-     * @param string $table Tabel yang ingin digabung
-     * @param string $type Tipe join (left, right, inner, dll)
+     * Menggabungkan tabel (JOIN).
+     *
+     * Konvensi default: {tabel_ini}.id_{singular} = {tabel_join}.id
+     * Contoh: products + categories → products.id_category = categories.id
+     *
+     * @param string      $table      Tabel yang ingin digabung
+     * @param string      $type       Tipe join (left, right, inner, dll)
+     * @param string|null $foreignKey Kolom FK di tabel ini jika tidak mengikuti konvensi
      * @return $this
      */
-    public function join($table, $type = 'left')
+    public function join($table, $type = 'left', $foreignKey = null)
     {
-        $this->db->join($table, "$this->table.id_$table = $table.id", $type);
+        $foreignKey = $foreignKey ?: $this->joinForeignKey($table);
+        $this->db->join($table, "{$this->table}.{$foreignKey} = {$table}.id", $type);
+
         return $this;
+    }
+
+    /**
+     * Menyusun nama kolom FK dari nama tabel yang di-join.
+     * categories → id_category, users → id_user
+     */
+    protected function joinForeignKey($table)
+    {
+        if (substr($table, -3) === 'ies') {
+            $singular = substr($table, 0, -3) . 'y';
+        } elseif (substr($table, -1) === 's') {
+            $singular = substr($table, 0, -1);
+        } else {
+            $singular = $table;
+        }
+
+        return 'id_' . $singular;
     }
 
     /**

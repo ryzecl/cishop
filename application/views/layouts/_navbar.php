@@ -33,7 +33,7 @@
                                 <a class="dropdown-item" href="<?= base_url('category') ?>">Kategori</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="/admin-product.html">Produk</a>
+                                <a class="dropdown-item" href="<?= base_url('product') ?>">Produk</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="/admin-order.html">Order</a>
