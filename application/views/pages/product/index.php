@@ -7,7 +7,7 @@
                 <div class="card-header">
                     <span>Produk</span>
                     <a
-                        href="/admin-product-form.html"
+                        href="<?= base_url('product/create') ?>"
                         class="btn btn-sm btn-secondary">Tambah</a>
                     <div class="float-end">
                         <form action="">
@@ -46,7 +46,7 @@
                                     <td>
                                         <p>
                                             <img
-                                                src="<?= $row->image ? base_url('assets/images/products/' . $row->image) : 'https://ui-avatars.com/api/?name=' . urlencode($row->product_title) ?>"
+                                                src="<?= $row->image ? base_url('images/products/' . $row->image) : 'https://ui-avatars.com/api/?name=' . urlencode($row->product_title) ?>"
                                                 alt="<?= $row->product_title ?>"
                                                 class="me-2" width="70" height="70" />
                                             <?= $row->product_title ?>

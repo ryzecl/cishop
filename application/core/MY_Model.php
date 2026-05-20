@@ -35,7 +35,7 @@ class MY_Model extends CI_Model
 
         $this->form_validation->set_rules($validationRules);
 
-        return $this->form_validation->run();
+        return $this->form_validation->run(get_instance());
     }
 
     /**
